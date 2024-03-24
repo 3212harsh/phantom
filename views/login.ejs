@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Login</h2>
+        <div style="display: flex;justify-content: center;text-align: center;">
+            <h3 style="color: red;">
+                <% if(message) {%>
+                    <%= message %>
+                <%}%>
+            </h3>
+        </div>
+        <form action="/login" method="post">
+          <div class="user-box">
+            <input type="text" name="user" required>
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="pass" required>
+            <label>Password</label>
+          </div>  
+            <div style="position: absolute;right: 40px;">
+                <a href="/signup">Signup</a>
+            </div>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button type="submit">Submit</button>
+          </a>
+        </form>
+      </div>
+      
+
+  <script src="/javascripts/login.js"></script>
+</body>
+</html>
